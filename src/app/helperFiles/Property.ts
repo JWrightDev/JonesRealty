@@ -5,4 +5,5 @@ export interface Property {
     contactLink: string;
     thumbnailLink: string;
     altText: string;
+    isNew?: boolean;
 }

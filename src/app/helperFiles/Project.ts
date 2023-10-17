@@ -5,4 +5,5 @@ export interface Project{
   projectDescription: string;
   thumbnailLink: string;
   projectContactLink: string;
+  isNew?: boolean;
 }

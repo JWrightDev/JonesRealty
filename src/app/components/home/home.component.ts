@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 // Initialization for ES Users
-import {Carousel, Modal, Ripple, initTE,} from "tw-elements";
+import {Carousel, Modal, Ripple, initTE, Alert} from "tw-elements";
 import {Featured} from "../../helperFiles/Featured";
 import {InfoService} from "../../services/info.service";
 
@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit{
   }
 
   ngOnInit(){
-    initTE({ Carousel, Modal, Ripple });
+    initTE({ Carousel, Modal, Ripple, Alert });
     this.infoService.getFeaturedObs().subscribe(featuredArray => this.featuredList = featuredArray);
   }
 }

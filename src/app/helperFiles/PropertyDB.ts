@@ -2,6 +2,24 @@ import {Property} from "./Property";
 
 export const PROPERTYLIST: Property[] = [
     {
+      id: 5,
+      address: 'St. Anthony\'s Lofts. Amherstburg, ON.',
+      description: 'Lofts Available Soon!',
+      contactLink: 'https://www.instagram.com/liveatthelofts/?hl=en',
+      thumbnailLink: './assets/Lofts/Loft-Front-View.JPG',
+      altText: "a view of the front of a building.",
+      isNew: true,
+    },
+    {
+      id: 6,
+      address: 'Richmond Praedium, Amherstburg, ON.',
+      description: 'Apartments Coming Soon!',
+      contactLink: 'https://www.facebook.com/profile.php?id=61551698053689',
+      thumbnailLink: './assets/Richmond/Building-Render.jpg',
+      altText: "a render of the apartment building",
+      isNew: true
+    },
+    {
         id: 0,
         address: '365 Sandwich Street S. Amherstburg, ON.',
         description: 'Commercial Space available for lease.',
@@ -18,14 +36,6 @@ export const PROPERTYLIST: Property[] = [
         altText: "a parking lot with several cars parked in it. "
     },
     {
-        id: 2,
-        address: 'The Fort. Amherstburg, ON.',
-        description: 'Multi-use complex center for sale',
-        contactLink: 'http://www.johndalimonte.com/Agents/Listings-Detail.cfm?sBrokerCode=remaxpreferred&aid=87122&m=22022389&id=3353472',
-        thumbnailLink: './assets/fort.png',
-        altText: "an empty parking lot in front of a activity center."
-    },
-    {
         id: 3,
         address: 'Amherstburg Yacht Club. Amherstburg, ON.',
         description: 'Boat wells available for rent',
@@ -36,9 +46,17 @@ export const PROPERTYLIST: Property[] = [
     {
         id: 4,
         address: 'River Canard Yacht Club. Amherstburg, ON.',
-        description: 'Boat wells available for rent',
+        description: 'Boat wells available for rent. Daily and seasonal launch passes available.',
         contactLink: 'https://www.facebook.com/amherstburgyachtclub',
         thumbnailLink: './assets/rcyc.png',
         altText: "a view of a boat dock from across the street. "
+    },
+    {
+      id: 2,
+      address: 'The Fort. Amherstburg, ON.',
+      description: 'Multi-use complex center for sale',
+      contactLink: 'http://www.johndalimonte.com/Agents/Listings-Detail.cfm?sBrokerCode=remaxpreferred&aid=87122&m=22022389&id=3353472',
+      thumbnailLink: './assets/fort.png',
+      altText: "an empty parking lot in front of a activity center."
     },
 ]

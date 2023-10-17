@@ -5,4 +5,5 @@ export interface Featured {
     email?: string;
     contactLink: string;
     description: string;
+    isNew?: boolean;
 }
