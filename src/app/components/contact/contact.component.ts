@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import { Ripple, Input, initTE, Validation, Alert } from "tw-elements";
 import emailjs from '@emailjs/browser';
 import {FormBuilder, FormGroup, NgForm} from "@angular/forms";
@@ -8,7 +8,7 @@ import {FormBuilder, FormGroup, NgForm} from "@angular/forms";
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit{
+export class ContactComponent implements OnInit, AfterViewInit{
 
   form: FormGroup = this.fb.group({
     from_name: '',
@@ -23,7 +23,11 @@ export class ContactComponent implements OnInit{
 
   ngOnInit() {
     initTE({ Ripple, Input, Validation, Alert });
-
+  }
+  ngAfterViewInit() {
+    let captchaCallback = function(){
+      grecaptcha.render("recaptcha", {'sitekey': '6Lc7w7goAAAAAJ1o4EfcPOYPvF7U89eYpX0G8wDw', 'theme': 'dark'});
+    }
   }
 
   async send(){
@@ -45,5 +49,7 @@ export class ContactComponent implements OnInit{
     alert('Your message has been sent!');
     this.form.reset();
   }
+
+
 
 }

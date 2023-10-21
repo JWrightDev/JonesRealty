@@ -19,7 +19,8 @@ import { MobileCollapseDirective } from './mobile-collapse.directive';
 import { AddTargetDirective } from './add-target.directive';
 import { ContactComponent } from './components/contact/contact.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {RECAPTCHA_SETTINGS, RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings} from "ng-recaptcha";
+import {RecaptchaFormsModule, RecaptchaModule} from "ng-recaptcha";
+import {RouterModule} from "@angular/router";
 
 
 @NgModule({
@@ -47,14 +48,10 @@ import {RECAPTCHA_SETTINGS, RecaptchaFormsModule, RecaptchaModule, RecaptchaSett
     ReactiveFormsModule,
     FormsModule,
     RecaptchaModule,
-    RecaptchaFormsModule
+    RecaptchaFormsModule,
+    RouterModule
   ],
-  providers: [{
-    provide: RECAPTCHA_SETTINGS,
-    useValue:{
-      siteKey: "6Lc7w7goAAAAAJ1o4EfcPOYPvF7U89eYpX0G8wDw"
-    } as RecaptchaSettings
-  }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

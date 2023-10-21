@@ -1,6 +1,14 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import { initTE, Collapse, Sticky } from "tw-elements";
 import * as CookieConsent from "vanilla-cookieconsent";
+import {
+  Router,
+  Event as RouterEvent,
+  NavigationStart,
+  NavigationEnd,
+  NavigationCancel,
+  NavigationError
+} from '@angular/router'
 
 
 @Component({
@@ -9,6 +17,25 @@ import * as CookieConsent from "vanilla-cookieconsent";
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, AfterViewInit {
+
+  public showOverlay = true;
+
+  constructor(private router: Router) {
+    this.router.events.subscribe((event: RouterEvent) => {
+      this.navigationInterceptor(event)
+    })
+  }
+
+  navigationInterceptor(event: RouterEvent){
+    if(event instanceof NavigationStart){
+      this.showOverlay = true;
+    }
+
+    if(event instanceof NavigationEnd){
+      this.showOverlay = false;
+    }
+  }
+
   ngAfterViewInit() {
 
     CookieConsent.run({
@@ -147,17 +174,17 @@ export class AppComponent implements OnInit, AfterViewInit {
         initTE({Collapse, Sticky});
     }
 
-    addTarget() {
-        const navItems = document.querySelectorAll('.nav-item');
-        if (navItems) {
-            navItems.forEach(navItem => {
-                navItem.setAttribute("data-te-target", "#menu");
-            });
-        }
-        return;
-    }
+  addTarget() {
+      const navItems = document.querySelectorAll('.nav-item');
+      if (navItems) {
+          navItems.forEach(navItem => {
+              navItem.setAttribute("data-te-target", "#menu");
+          });
+      }
+      return;
+  }
 
-    removeTarget() {
+  removeTarget() {
         const navItems = document.querySelectorAll('.nav-item');
         if (navItems) {
             navItems.forEach(navItem => {
