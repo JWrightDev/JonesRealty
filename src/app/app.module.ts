@@ -17,6 +17,10 @@ import { FeaturedComponent } from './components/helpers/featured/featured.compon
 import {NgOptimizedImage} from "@angular/common";
 import { MobileCollapseDirective } from './mobile-collapse.directive';
 import { AddTargetDirective } from './add-target.directive';
+import { ContactComponent } from './components/contact/contact.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {RECAPTCHA_SETTINGS, RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings} from "ng-recaptcha";
+
 
 @NgModule({
   declarations: [
@@ -31,16 +35,26 @@ import { AddTargetDirective } from './add-target.directive';
     ProjectCardComponent,
     FeaturedComponent,
     MobileCollapseDirective,
-    AddTargetDirective
+    AddTargetDirective,
+    ContactComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        OutlineIconsModule,
-        NgOptimizedImage
-    ],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    OutlineIconsModule,
+    NgOptimizedImage,
+    ReactiveFormsModule,
+    FormsModule,
+    RecaptchaModule,
+    RecaptchaFormsModule
+  ],
+  providers: [{
+    provide: RECAPTCHA_SETTINGS,
+    useValue:{
+      siteKey: "6Lc7w7goAAAAAJ1o4EfcPOYPvF7U89eYpX0G8wDw"
+    } as RecaptchaSettings
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
