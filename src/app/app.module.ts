@@ -19,7 +19,7 @@ import { MobileCollapseDirective } from './mobile-collapse.directive';
 import { AddTargetDirective } from './add-target.directive';
 import { ContactComponent } from './components/contact/contact.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {RecaptchaFormsModule, RecaptchaModule} from "ng-recaptcha";
+import {RECAPTCHA_SETTINGS, RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings} from "ng-recaptcha";
 import {RouterModule} from "@angular/router";
 
 
@@ -51,7 +51,12 @@ import {RouterModule} from "@angular/router";
     RecaptchaFormsModule,
     RouterModule
   ],
-  providers: [],
+  providers: [{
+    provide: RECAPTCHA_SETTINGS,
+    useValue: {
+      siteKey: "6Lc7w7goAAAAAJ1o4EfcPOYPvF7U89eYpX0G8wDw",
+    } as RecaptchaSettings,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

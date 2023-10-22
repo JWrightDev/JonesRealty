@@ -7,27 +7,18 @@
   }
 </script>
 
-<h3 class="text-3xl text-primary text-center m-5">Get In Contact With Us!</h3>
+<h3 class="text-3xl text-primary lg:text-center m-5">Get In Contact With Us!</h3>
 <div
-  id="result-container"
-  class="fixed right-4 top-4 z-[100] mb-3 hidden w-1/4 items-center rounded-lg bg-primary-100 px-6 py-4 text-base text-primary-800 data-[te-alert-show]:inline-flex"
-  role="alert"
-  data-te-alert-init
-  data-te-autohide="true"
-  data-te-delay="4000">
-  Result
-</div>
-<div
-  class="block rounded-lg bg-neutral-700 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
+  class="block rounded-lg bg-neutral-700 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] lg:w-full w-[90%] mx-auto">
   <div class="flex flex-wrap items-center">
     <div class="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
       <div class="h-[500px] w-full">
         <iframe class="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5920.437748841736!2d-83.112414!3d42.102783!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b3c84be9eabd1%3A0x244ccac3ab5bb14a!2s56%20Richmond%20St%2C%20Amherstburg%2C%20ON%20N9V%201E9!5e0!3m2!1sen!2sca!4v1697921773198!5m2!1sen!2sca" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
-    <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12 grid md:grid-cols-2 items-center">
+    <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12 grid xl:grid-cols-2 items-center my-5">
       <div class="flex flex-col px-3 pt-12 pb-12 md:pb-0 lg:pt-0">
-        <div class="mb-12 w-full shrink-0 grow-0 basis-auto px-3 md:w-6/12 md:px-6 lg:w-full xl:w-full xl:px-12">
+        <div class="mb-12 w-full shrink-0 grow-0 basis-auto px-3 md:w-full md:px-6 lg:w-full xl:w-full xl:px-12">
           <div class="flex items-start">
             <div class="shrink-0">
               <div class="inline-block rounded-md bg-primary-100 p-4 text-primary">
@@ -38,30 +29,12 @@
                 </svg>
               </div>
             </div>
-            <div class="ml-6 grow">
+            <div class="ml-6 grow w-full">
               <p class="mb-2 font-bold dark:text-white">
                 Phone
               </p>
-              <p class="text-neutral-500 dark:text-neutral-200">
+              <p class="text-neutral-500 dark:text-neutral-200 ">
                 <a href="tel:226-345-9045" class="cursor-pointer hover:text-primary active:text-primary focus:text-primary hover:underline active:underline focus:underline">226-345-9045</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="mb-12 w-full shrink-0 grow-0 basis-auto px-3 md:w-6/12 md:px-6 lg:w-full xl:w-6/12 xl:px-12">
-          <div class="flex items-start">
-            <div class="shrink-0">
-              <div class="inline-block rounded-md bg-primary-100 p-4 text-primary">
-                <envelope-outline-icon class="h-6 w-6" stroke="2"
-                                       color="black"></envelope-outline-icon>
-              </div>
-            </div>
-            <div class="ml-6 grow">
-              <p class="mb-2 font-bold dark:text-white">
-                Email
-              </p>
-              <p class="text-neutral-500 dark:text-neutral-200">
-                <a href="mailto:mackie.jones@jonesgroup.ca" class="cursor-pointer hover:text-primary active:text-primary focus:text-primary hover:underline active:underline focus:underline">mackie.jones@jonesgroup.ca</a>
               </p>
             </div>
           </div>
@@ -84,56 +57,57 @@
           </div>
         </div>
       </div>
-      <div>
-        <section class="mx-auto text-center">
+      <div class="py-12 lg:pb-0 lg:pt-0">
+        <section class="mx-auto text-center md:w-full w-[90%]">
           <div class="mx-auto max-w-[700px] md:px-3 my-auto" >
-            <h2 class="my-5 text-3xl font-bold text-primary">Send us a message!</h2>
-            <p class="text-sm text-neutral-400 my-5">Have any questions? Send us a message and we will answer as soon as possible.</p>
-            <form (ngSubmit)="send()" [formGroup]="form">
-              <div class="relative mb-6" data-te-input-wrapper-init>
+            <form (ngSubmit)="send()" [formGroup]="form" data-te-validation-init data-te-active-validation="true" id="form-results">
+              <div class="relative mb-6" data-te-input-wrapper-init data-te-validate="input" data-te-validation-ruleset="isRequired">
                 <input
                   type="text"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                  id="exampleInput90"
-                  placeholder="Name" formControlName="from_name"/>
+                  id="exampleInput90" required
+                  placeholder="Name" formControlName="from_name" #name/>
                 <label
                   class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                   for="exampleInput90"
-                >Name
+                >Name*
                 </label>
               </div>
-              <div class="relative mb-6" data-te-input-wrapper-init>
+              <div class="relative mb-6" data-te-input-wrapper-init data-te-validate="input" data-te-validation-ruleset="isRequired|isEmail">
                 <input
                   type="email"
                   class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                  id="exampleInput91"
-                  placeholder="Email address" formControlName="from_email"/>
+                  id="exampleInput91" required
+                  placeholder="Email address" formControlName="from_email" #email/>
                 <label
                   class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                   for="exampleInput91"
-                >Email address
+                >Email address*
                 </label>
               </div>
-              <div class="relative mb-6" data-te-input-wrapper-init>
-          <textarea
-            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-            id="exampleFormControlTextarea1"
-            rows="3"
-            placeholder="Your message" formControlName="message"></textarea>
+              <div class="relative mb-6" data-te-input-wrapper-init data-te-validate="input" data-te-validation-ruleset="isRequired">
+                <textarea
+                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                  id="exampleFormControlTextarea1"
+                  rows="3" required
+                  placeholder="Your message" formControlName="message"></textarea>
                 <label
                   for="exampleFormControlTextarea1"
                   class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                >Message</label>
+                >Message*</label>
               </div>
-              <div id="recaptcha" class="my-5" data-sitekey="6Lc7w7goAAAAAJ1o4EfcPOYPvF7U89eYpX0G8wDw"></div>
-              <div class="text-red-600 hidden my-5" id="requiredCaptcha">Captcha is required.</div>
+              <div id="captcha-container" class="">
+                <re-captcha id="recaptcha" theme="dark"></re-captcha>
+                <div class="text-red-600 hidden z-10 fixed" id="requiredCaptcha">Captcha is required.</div>
+              </div>
               <button
-                type="submit"
-                data-te-ripple-init
-                data-te-ripple-color="light"
-                class="mb-6 inline-block w-full rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-bold uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#FAFF00] transition duration-150 ease-in-out hover:bg-primary-400 hover:shadow-[0_8px_9px_-4px_rgba(250,255,0,0.3),0_4px_18px_0_rgba(250,255,0,0.2)] focus:bg-primary-600 focus:shadow-shadow-[0_8px_9px_-4px_rgba(250,255,0,0.3),0_4px_18px_0_rgba(250,255,0,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(250,255,0,0.3),0_4px_18px_0_rgba(250,255,0,0.2)]">
+                type="submit" [disabled]="form.invalid"
+                data-te-ripple-init data-te-submit-btn-ref
+                data-te-ripple-color="secondary"
+                class="my-5 mt-6 inline-block w-full rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-bold uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#FAFF00] transition duration-150 ease-in-out hover:bg-primary-400 hover:shadow-[0_8px_9px_-4px_rgba(250,255,0,0.3),0_4px_18px_0_rgba(250,255,0,0.2)] focus:bg-primary-600 focus:shadow-shadow-[0_8px_9px_-4px_rgba(250,255,0,0.3),0_4px_18px_0_rgba(250,255,0,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(250,255,0,0.3),0_4px_18px_0_rgba(250,255,0,0.2)] disabled:cursor-not-allowed disabled:bg-opacity-30">
                 Send
               </button>
+              <p class="text-xs text-neutral-400 m-2 mt-0">* Required</p>
             </form>
           </div>
         </section>
@@ -141,5 +115,7 @@
     </div>
   </div>
 </div>
+
+
 
 
