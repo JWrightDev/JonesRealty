@@ -27,8 +27,6 @@ export class ContactComponent implements OnInit{
 
 
 
-
-
   async send(){
     if(grecaptcha.getResponse() == ""){
       // @ts-ignore
@@ -37,6 +35,11 @@ export class ContactComponent implements OnInit{
       document.getElementById("requiredCaptcha").classList.add('block');
       return;
     }
+    const resultContainer = document.getElementById("result-container");
+    const alertInstance = Alert.getInstance(resultContainer);
+
+    alertInstance.show();
+
     // let response = await emailjs.send("service_ftcuz0q","template_so4m40t",{
     //   from_name: this.form.value.from_name,
     //   message: this.form.value.message,
@@ -44,7 +47,9 @@ export class ContactComponent implements OnInit{
     //   "g-recaptcha-response": grecaptcha.getResponse()
     // }, "T-56xGEu6ILPpIZ-U");
 
+    //alert("Success! Your message has been sent. We will respond as soon as possible.");
     this.form.reset();
+    grecaptcha.reset();
   }
 
 
