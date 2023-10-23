@@ -19,12 +19,14 @@ import {routerTransition, } from "./router.animations";
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  loading: boolean = false;
+  loading: boolean = true;
+  opacity: number = 1;
+  transitionTime: number = 1;
 
   constructor(private router: Router, private contexts: ChildrenOutletContexts) {
-    // this.router.events.subscribe((event: RouterEvent) => {
-    //   this.navigationInterceptor(event)
-    // });
+    this.router.events.subscribe((event: RouterEvent) => {
+      this.navigationInterceptor(event)
+    });
   }
 
   ngOnInit() {
@@ -35,28 +37,25 @@ export class AppComponent implements OnInit, AfterViewInit {
     return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
   }
 
-  // navigationInterceptor(event: RouterEvent){
-  //   if(event instanceof NavigationStart){
-  //     this.loading = true;
-  //   }
-  //
-  //   if(event instanceof NavigationEnd){
-  //     setTimeout(()=>{
-  //       this.loading = false;
-  //     }, 1000);
-  //   }
-  //
-  //   if(event instanceof NavigationCancel){
-  //     this.loading = false;
-  //     return;
-  //   }
-  //
-  //   if(event instanceof NavigationError){
-  //     this.loading = false;
-  //     return;
-  //   }
-  //
-  // }
+  navigationInterceptor(event: RouterEvent){
+    if(event instanceof NavigationEnd){
+      setTimeout(()=>{
+        this.opacity = 0;
+        this.loading = false;
+      }, 1500);
+    }
+
+    if(event instanceof NavigationCancel){
+      this.loading = false;
+      return;
+    }
+
+    if(event instanceof NavigationError){
+      this.loading = false;
+      return;
+    }
+
+  }
 
   ngAfterViewInit() {
     CookieConsent.run({
