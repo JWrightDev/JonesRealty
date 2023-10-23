@@ -1,5 +1,5 @@
 <div
-  class="alert alert-dismissible fade show items-center justify-between rounded-lg bg-primary py-4 px-6 text-center text-black md:flex md:text-left m-5">
+  class="alert alert-dismissible fade show items-center justify-between rounded-lg bg-primary py-4 px-6 text-center text-black md:flex md:text-left m-5" id="banner">
   <div class="mb-4 flex flex-wrap items-center justify-center md:mb-0 md:justify-start">
         <span class="mr-2 [&>svg]:h-5 [&>svg]:w-5">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
@@ -89,14 +89,14 @@
 
     <!--Featured Property-->
     <section
-            class="text-center grid md:grid-cols-2 grid-cols-1">
+            class="text-center grid md:grid-cols-2 grid-cols-1 featured-title mx-5">
             <h2 class="text-center lg:text-3xl text-2xl text-primary m-5 md:col-span-2 shadow-secondary">
             Featured <br> Amherstburg Properties</h2>
 
       <!--Modal 1-->
       <a
         type="button"
-        class="inline-block rounded mb-2 mt-2.5 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:cursor-pointer overflow-hidden md:w-full w-[85%] mx-auto"
+        class="featured-modal inline-block mb-2 mt-2.5 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:cursor-pointer overflow-hidden md:w-full w-[85%] mx-auto"
         data-te-toggle="modal"
         data-te-target="#modal"
         data-te-ripple-init
@@ -198,7 +198,7 @@
         </div>
       </div>
 
-      <section class="flex flex-col items-center md:ml-10 justify-center">
+      <section class="featured-modal flex flex-col items-center md:ml-10 justify-center">
         <span
           class="inline-block whitespace-nowrap rounded-[0.27rem] bg-primary px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-black m-5"
         >New</span>
@@ -216,7 +216,7 @@
       <hr
         class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-primary to-transparent opacity-25 dark:opacity-100 md:col-span-2" />
 
-      <section class="flex flex-col items-center md:mr-10 justify-center">
+      <section class="featured-modal flex flex-col items-center md:mr-10 justify-center">
         <span
           class="inline-block whitespace-nowrap rounded-[0.27rem] bg-primary px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-black m-5"
         >New</span>
@@ -235,7 +235,7 @@
       <!-- Modal 2 -->
       <a
         type="button"
-        class="inline-block rounded mb-2 mt-2.5 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:cursor-pointer overflow-hidden md:w-full w-[85%] mx-auto"
+        class="featured-modal inline-block mb-2 mt-2.5 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:cursor-pointer overflow-hidden md:w-full w-[85%] mx-auto"
         data-te-toggle="modal"
         data-te-target="#modal2"
         data-te-ripple-init

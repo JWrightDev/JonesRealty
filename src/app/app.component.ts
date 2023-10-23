@@ -7,37 +7,58 @@ import {
   NavigationStart,
   NavigationEnd,
   NavigationCancel,
-  NavigationError
+  NavigationError, ChildrenOutletContexts
 } from '@angular/router'
+import {routerTransition, } from "./router.animations";
 
 
 @Component({
     selector: 'app-root',
+    animations: [routerTransition],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, AfterViewInit {
+  loading: boolean = false;
 
-  public showOverlay = true;
-
-  constructor(private router: Router) {
-    this.router.events.subscribe((event: RouterEvent) => {
-      this.navigationInterceptor(event)
-    })
+  constructor(private router: Router, private contexts: ChildrenOutletContexts) {
+    // this.router.events.subscribe((event: RouterEvent) => {
+    //   this.navigationInterceptor(event)
+    // });
   }
 
-  navigationInterceptor(event: RouterEvent){
-    if(event instanceof NavigationStart){
-      this.showOverlay = true;
-    }
-
-    if(event instanceof NavigationEnd){
-      this.showOverlay = false;
-    }
+  ngOnInit() {
+    initTE({Collapse, Sticky});
   }
+
+  getState(outlet: any){
+    return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
+  }
+
+  // navigationInterceptor(event: RouterEvent){
+  //   if(event instanceof NavigationStart){
+  //     this.loading = true;
+  //   }
+  //
+  //   if(event instanceof NavigationEnd){
+  //     setTimeout(()=>{
+  //       this.loading = false;
+  //     }, 1000);
+  //   }
+  //
+  //   if(event instanceof NavigationCancel){
+  //     this.loading = false;
+  //     return;
+  //   }
+  //
+  //   if(event instanceof NavigationError){
+  //     this.loading = false;
+  //     return;
+  //   }
+  //
+  // }
 
   ngAfterViewInit() {
-
     CookieConsent.run({
       root: '#cc',
       autoShow: true,
@@ -169,10 +190,6 @@ export class AppComponent implements OnInit, AfterViewInit {
       }
     });
   }
-
-  ngOnInit() {
-        initTE({Collapse, Sticky});
-    }
 
   addTarget() {
       const navItems = document.querySelectorAll('.nav-item');
