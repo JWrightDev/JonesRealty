@@ -27,8 +27,6 @@ export class ContactComponent implements OnInit{
     initTE({ Ripple, Input, Validation, Alert });
   }
 
-
-
   async send(){
     if(grecaptcha.getResponse() == ""){
       // @ts-ignore

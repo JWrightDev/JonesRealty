@@ -1,4 +1,4 @@
-import {trigger, animate, style, group, animateChild, query, stagger, transition} from "@angular/animations";
+import {trigger, animate, style, group, animateChild, query, stagger, transition, state} from "@angular/animations";
 
 export const routerTransition = trigger('routerTransition', [
   transition('* <=> *', [
@@ -27,35 +27,9 @@ export const routerTransition = trigger('routerTransition', [
   ])
 ]);
 
-
-
-
-// export const routerTransition = trigger('routerTransition', [
-//   transition('* <=> *',[
-//     style({position: 'relative'}),
-//     query(':enter, :leave', style({position: 'relative', top: 0, width: '100%'}),{optional: true}),
-//     query(':enter .block, :enter .featured-title, :enter #card', style({opacity: '0'}), {optional: true}),
-//     query(':leave', animateChild(), {optional: true}),
-//     group([
-//       query(':leave *', [
-//         style({ transform: 'translateX(0%)' }),
-//         animate('0.5s ease-in-out', style({ transform: 'translateX(-150%)' }))
-//       ], { optional: true }),
-//       query(':enter #banner,:enter #properties',[
-//         style({transform: 'translateX(100%)'}),
-//         animate('0.5s ease-in-out', style({transform: 'translateX(0%)'}))
-//       ], {optional: true}),
-//     ]),
-//     //Fade in and slide up
-//     group([
-//       query(':enter .featured-title, :enter .block, :enter .feature-modal, :enter #card',[
-//         style({transform: 'translateX(100%)'}),
-//         animate('0.5s ease-in-out', style({transform: 'translateX(0%)'}))
-//       ], {optional: true}),
-//       query(':enter .featured-title, :enter .block, :enter .feature-modal, :enter #card', stagger(400, [
-//         style({transform: 'translateY(100px)'}),
-//         animate('1s ease-in-out', style({transform: 'translateY(0px)', opacity: 1})),
-//       ]), {optional: true}),
-//     ]),
-//   ])
-// ]);
+export const loadingTransition = trigger('loadingTransition', [
+  state('void', style({opacity: 1, display: 'block'})),
+  state('*', style({opacity: 0, display: 'none'})),
+  transition('void => *', animate('1500ms ease-in')),
+  transition('* => void', animate('1500ms ease-out'))
+]);

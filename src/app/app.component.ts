@@ -9,53 +9,34 @@ import {
   NavigationCancel,
   NavigationError, ChildrenOutletContexts
 } from '@angular/router'
-import {routerTransition, } from "./router.animations";
+import {loadingTransition, routerTransition,} from "./router.animations";
 
 
 @Component({
     selector: 'app-root',
-    animations: [routerTransition],
+    animations: [routerTransition, loadingTransition],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, AfterViewInit {
   loading: boolean = true;
-  opacity: number = 1;
-  transitionTime: number = 1;
+
 
   constructor(private router: Router, private contexts: ChildrenOutletContexts) {
-    this.router.events.subscribe((event: RouterEvent) => {
-      this.navigationInterceptor(event)
-    });
+
   }
 
   ngOnInit() {
     initTE({Collapse, Sticky});
+    // setTimeout(() =>{
+    //   this.loading = !this.loading;
+    // }, 1500);
   }
 
   getState(outlet: any){
     return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
   }
 
-  navigationInterceptor(event: RouterEvent){
-    if(event instanceof NavigationEnd){
-      setTimeout(()=>{
-        this.opacity = 0;
-        this.loading = false;
-      }, 1500);
-    }
-
-    if(event instanceof NavigationCancel){
-      this.loading = false;
-      return;
-    }
-
-    if(event instanceof NavigationError){
-      this.loading = false;
-      return;
-    }
-
-  }
 
   ngAfterViewInit() {
     CookieConsent.run({
