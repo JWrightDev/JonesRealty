@@ -40,12 +40,12 @@ export class ContactComponent implements OnInit{
 
     alertInstance.show();
 
-    let response = await emailjs.send("service_ftcuz0q","template_so4m40t",{
+    let response = await emailjs.send("service_be5qpgl","template_oqy0z8h",{
       from_name: this.form.value.from_name,
       message: this.form.value.message,
       reply_to: this.form.value.from_email,
       "g-recaptcha-response": grecaptcha.getResponse()
-    }, "T-56xGEu6ILPpIZ-U");
+    }, "98DFvURV_aXEP6HbH");
 
     //alert("Success! Your message has been sent. We will respond as soon as possible.");
     this.form.reset();
