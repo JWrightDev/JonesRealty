@@ -79,7 +79,7 @@ export const PROPERTYLIST: Property[] = [
 	{
 		id: 6,
 		address: 'Garage Gym. Amherstburg, ON.',
-		description: 'Property available for lease.',
+		description: 'Space available for lease.',
 		contactLink: '',
 		thumbnailLink:
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/garagegym.JPG?updatedAt=1706385791175',
