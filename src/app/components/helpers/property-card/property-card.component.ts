@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Property } from '../../../helperFiles/Property';
-import { initTE, Ripple } from 'tw-elements';
+import { Carousel, initTE, Modal, Ripple } from 'tw-elements';
 
 @Component({
 	selector: 'app-property-card',
@@ -22,7 +22,7 @@ export class PropertyCardComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		initTE({ Ripple });
+		initTE({ Ripple, Modal, Carousel });
 	}
 
 	openWindow(url: string) {
