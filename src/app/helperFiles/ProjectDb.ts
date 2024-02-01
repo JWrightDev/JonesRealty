@@ -2,15 +2,6 @@ import { Project } from './Project';
 
 export const PROJECTLIST: Project[] = [
 	{
-		id: 2,
-		projectName: '1191 Walker Road. McGregor, ON.',
-		projectDescription: 'Coming Soon!',
-		projectCategory: 'Office Space For Lease',
-		thumbnailLink:
-			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/JonesRealtyLogo.png',
-		projectContactLink: '',
-	},
-	{
 		id: 3,
 		projectName: 'Miss MJ Ship, Amherstburg, ON.',
 		projectDescription: 'Coming Soon!',
@@ -28,6 +19,17 @@ export const PROJECTLIST: Project[] = [
 		thumbnailLink:
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/JonesRealtyLogo.png',
 		projectContactLink: '',
+		isNew: true,
+	},
+	{
+		id: 5,
+		projectName: '231 Sandwich St. South, Amherstburg, ON.',
+		projectDescription: 'Coming Soon!',
+		projectCategory: 'Vacant Lot',
+		thumbnailLink:
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/JonesRealtyLogo.png',
+		projectContactLink:
+			'https://www.realtor.ca/real-estate/26230724/231-sandwich-street-south-amherstburg',
 		isNew: true,
 	},
 ];

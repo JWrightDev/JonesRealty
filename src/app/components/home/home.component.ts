@@ -28,4 +28,8 @@ export class HomeComponent implements OnInit {
 			.getFeaturedObs()
 			.subscribe((featuredArray) => (this.featuredList = featuredArray));
 	}
+
+	openWindow(url: string) {
+		window.open(url, '_blank');
+	}
 }
