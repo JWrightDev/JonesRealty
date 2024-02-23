@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Property } from '../../helperFiles/Property';
 import { InfoService } from '../../services/info.service';
 import { ActivatedRoute } from '@angular/router';
+import { initTE, Sticky } from 'tw-elements';
 
 @Component({
 	selector: 'app-details',
@@ -29,6 +30,8 @@ export class DetailsComponent implements OnInit {
 		this.id = 0;
 	}
 	ngOnInit(): void {
+		initTE({ Sticky });
+
 		this.route.params.subscribe((params) => {
 			this.id = params['id'];
 		});
