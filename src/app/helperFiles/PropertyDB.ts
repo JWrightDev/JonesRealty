@@ -36,11 +36,11 @@ export const PROPERTYLIST: Property[] = [
 		thumbnails: [
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/stjohns-living-room.jpg?updatedAt=1706382340739',
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/stjohns-kitchen.jpg?updatedAt=1706382340987',
-			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/stjohns-bedroom-3.jpg?updatedAt=1706382341194',
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/stjohns-hall.jpg?updatedAt=1706382341873',
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/stjohns-hall-2.jpg?updatedAt=1706382341943',
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/stjohns-bedroom.jpg?updatedAt=1706382341154',
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/stjohns-bedroom-2.jpg?updatedAt=1706382340732',
-			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/stjohns-hall-2.jpg?updatedAt=1706382341943',
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/stjohns-bedroom-3.jpg?updatedAt=1706382341194',
 		],
 		listingLink: '',
 	},
@@ -71,6 +71,13 @@ export const PROPERTYLIST: Property[] = [
 		thumbnailLink:
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/ayc.jpeg?tr=w-600',
 		altText: 'an aerial view of a marina with boats docked. ',
+		thumbnails: [
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/ayc.jpeg?updatedAt=1698853744782',
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/docks.jpg?updatedAt=1698853735659',
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/docks-2.jpg?updatedAt=1698853745162',
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/docks-3.jpg?updatedAt=1698853743697',
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/docks-4.jpg?updatedAt=1698853741651',
+		],
 	},
 	{
 		id: 5,
