@@ -16,6 +16,10 @@ export const PROPERTYLIST: Property[] = [
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/Lofts-bedroom-3.JPG?updatedAt=1698853809376',
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/Lofts-bathroom-2.JPG?updatedAt=1698853810972',
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/Lofts-dining-room.JPG?updatedAt=1698853747685',
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/Lofts-balcony.JPG?updatedAt=1698853811988',
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/Lofts-bedroom-2.JPG?updatedAt=1698853808868',
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/Lofts-kitchen.JPG?updatedAt=1698853747207',
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/Lofts-living-room-2.JPG?updatedAt=1698853745729',
 		],
 		listingLink:
 			'https://www.realtor.ca/real-estate/26115295/247-brock-street-unit-204-amherstburg',
@@ -32,9 +36,11 @@ export const PROPERTYLIST: Property[] = [
 		thumbnails: [
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/stjohns-living-room.jpg?updatedAt=1706382340739',
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/stjohns-kitchen.jpg?updatedAt=1706382340987',
-			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/stjohns-bedroom-3.jpg?updatedAt=1706382341194',
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/stjohns-hall.jpg?updatedAt=1706382341873',
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/stjohns-hall-2.jpg?updatedAt=1706382341943',
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/stjohns-bedroom.jpg?updatedAt=1706382341154',
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/stjohns-bedroom-2.jpg?updatedAt=1706382340732',
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/stjohns-bedroom-3.jpg?updatedAt=1706382341194',
 		],
 		listingLink: '',
 	},
@@ -65,6 +71,13 @@ export const PROPERTYLIST: Property[] = [
 		thumbnailLink:
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/ayc.jpeg?tr=w-600',
 		altText: 'an aerial view of a marina with boats docked. ',
+		thumbnails: [
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/ayc.jpeg?updatedAt=1698853744782',
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/docks.jpg?updatedAt=1698853735659',
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/docks-2.jpg?updatedAt=1698853745162',
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/docks-3.jpg?updatedAt=1698853743697',
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/docks-4.jpg?updatedAt=1698853741651',
+		],
 	},
 	{
 		id: 5,
