@@ -42,7 +42,8 @@ export const PROPERTYLIST: Property[] = [
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/stjohns-bedroom-2.jpg?updatedAt=1706382340732',
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/stjohns-bedroom-3.jpg?updatedAt=1706382341194',
 		],
-		listingLink: '',
+		listingLink:
+			'https://www.remax.ca/on/amherstburg-real-estate/207-brock-unit-207-wp_idm73000004-26430613-lst',
 	},
 	{
 		id: 2,
