@@ -5,7 +5,7 @@ import { PropertiesComponent } from './components/properties/properties.componen
 import { ProjectsComponent } from './components/projects/projects.component';
 import { MediaComponent } from './components/media/media.component';
 import { CompanyComponent } from './components/company/company.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
+import { NotFoundComponent } from './components/ui/not-found/not-found.component';
 import { DetailsComponent } from './components/details/details.component';
 
 const routes: Routes = [

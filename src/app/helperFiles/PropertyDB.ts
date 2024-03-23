@@ -23,6 +23,7 @@ export const PROPERTYLIST: Property[] = [
 		],
 		listingLink:
 			'https://www.realtor.ca/real-estate/26115295/247-brock-street-unit-204-amherstburg',
+		isLeased: false,
 	},
 	{
 		id: 1,
@@ -44,6 +45,7 @@ export const PROPERTYLIST: Property[] = [
 		],
 		listingLink:
 			'https://www.remax.ca/on/amherstburg-real-estate/207-brock-unit-207-wp_idm73000004-26430613-lst',
+		isLeased: false,
 	},
 	{
 		id: 2,
@@ -54,6 +56,7 @@ export const PROPERTYLIST: Property[] = [
 		thumbnailLink:
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/365Sandwich.png?tr=w-600',
 		altText: 'an empty parking lot in front of a building. ',
+		isLeased: false,
 	},
 	{
 		id: 3,
@@ -63,6 +66,7 @@ export const PROPERTYLIST: Property[] = [
 		thumbnailLink:
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/weston.png?tr=w-600',
 		altText: 'a parking lot with several cars parked in it. ',
+		isLeased: true,
 	},
 	{
 		id: 4,
@@ -79,6 +83,7 @@ export const PROPERTYLIST: Property[] = [
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/docks-3.jpg?updatedAt=1698853743697',
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/docks-4.jpg?updatedAt=1698853741651',
 		],
+		isLeased: false,
 	},
 	{
 		id: 5,
@@ -89,6 +94,7 @@ export const PROPERTYLIST: Property[] = [
 		thumbnailLink:
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/rcyc.jpg',
 		altText: 'a view of a boat dock from across the street. ',
+		isLeased: false,
 	},
 	{
 		id: 6,
@@ -98,5 +104,6 @@ export const PROPERTYLIST: Property[] = [
 		thumbnailLink:
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/garagegym.JPG?updatedAt=1706385791175',
 		altText: 'Street view of garage gym',
+		isLeased: true,
 	},
 ];
