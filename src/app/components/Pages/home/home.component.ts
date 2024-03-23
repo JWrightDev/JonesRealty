@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 // Initialization for ES Users
 import { Carousel, Modal, Ripple, initTE, Alert } from 'tw-elements';
-import { Featured } from '../../helperFiles/Featured';
-import { InfoService } from '../../services/info.service';
-import { routerTransition } from '../../router.animations';
+import { Featured } from '../../../helperFiles/Featured';
+import { InfoService } from '../../../services/info.service';
+import { routerTransition } from '../../../router.animations';
 
 @Component({
 	selector: 'app-home',

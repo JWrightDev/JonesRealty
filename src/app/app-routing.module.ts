@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { PropertiesComponent } from './components/properties/properties.component';
-import { ProjectsComponent } from './components/projects/projects.component';
-import { MediaComponent } from './components/media/media.component';
-import { CompanyComponent } from './components/company/company.component';
+import { HomeComponent } from './components/Pages/home/home.component';
+import { PropertiesComponent } from './components/Pages/properties/properties.component';
+import { ProjectsComponent } from './components/Pages/projects/projects.component';
+import { MediaComponent } from './components/Pages/media/media.component';
+import { CompanyComponent } from './components/Pages/company/company.component';
 import { NotFoundComponent } from './components/ui/not-found/not-found.component';
-import { DetailsComponent } from './components/details/details.component';
+import { DetailsComponent } from './components/Pages/details/details.component';
 
 const routes: Routes = [
 	{

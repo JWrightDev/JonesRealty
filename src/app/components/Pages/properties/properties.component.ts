@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Property } from '../../helperFiles/Property';
-import { InfoService } from '../../services/info.service';
-import { routerTransition } from '../../router.animations';
+import { Property } from '../../../helperFiles/Property';
+import { InfoService } from '../../../services/info.service';
+import { routerTransition } from '../../../router.animations';
 import { Carousel, Modal, Ripple, initTE } from 'tw-elements';
 
 @Component({
