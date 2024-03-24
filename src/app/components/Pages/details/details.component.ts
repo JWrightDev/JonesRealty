@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Property } from '../../helperFiles/Property';
-import { InfoService } from '../../services/info.service';
+import { Property } from '../../../helperFiles/Property';
+import { InfoService } from '../../../services/info.service';
 import { ActivatedRoute } from '@angular/router';
 import { initTE, Sticky } from 'tw-elements';
 

@@ -8,4 +8,5 @@ export interface Property {
 	isNew?: boolean;
 	thumbnails?: string[];
 	listingLink?: string;
+	isLeased?: boolean;
 }

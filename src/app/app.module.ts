@@ -2,21 +2,21 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
-import { PropertiesComponent } from './components/properties/properties.component';
-import { ProjectsComponent } from './components/projects/projects.component';
-import { MediaComponent } from './components/media/media.component';
-import { CompanyComponent } from './components/company/company.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HomeComponent } from './components/Pages/home/home.component';
+import { PropertiesComponent } from './components/Pages/properties/properties.component';
+import { ProjectsComponent } from './components/Pages/projects/projects.component';
+import { MediaComponent } from './components/Pages/media/media.component';
+import { CompanyComponent } from './components/Pages/company/company.component';
+import { NotFoundComponent } from './components/ui/not-found/not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OutlineIconsModule, SolidIconsModule } from '@dimaslz/ng-heroicons';
-import { PropertyCardComponent } from './components/helpers/property-card/property-card.component';
-import { ProjectCardComponent } from './components/helpers/project-card/project-card.component';
-import { FeaturedComponent } from './components/helpers/featured/featured.component';
+import { PropertyCardComponent } from './components/ui/property-card/property-card.component';
+import { ProjectCardComponent } from './components/ui/project-card/project-card.component';
+import { FeaturedComponent } from './components/ui/featured/featured.component';
 import { NgOptimizedImage } from '@angular/common';
 import { MobileCollapseDirective } from './directives/mobile-collapse.directive';
 import { AddTargetDirective } from './directives/add-target.directive';
-import { ContactComponent } from './components/contact/contact.component';
+import { ContactComponent } from './components/ui/contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
 	RECAPTCHA_SETTINGS,
@@ -25,9 +25,11 @@ import {
 	RecaptchaSettings,
 } from 'ng-recaptcha';
 import { RouterModule } from '@angular/router';
-import { LoadingScreenComponent } from './components/loading-screen/loading-screen.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { DetailsComponent } from './components/details/details.component';
+import { LoadingScreenComponent } from './components/ui/loading-screen/loading-screen.component';
+import { FooterComponent } from './components/ui/footer/footer.component';
+import { DetailsComponent } from './components/Pages/details/details.component';
+import { ServicesComponent } from './components/ui/services/services.component';
+import { HeaderComponent } from './components/ui/header/header.component';
 
 @NgModule({
 	declarations: [
@@ -46,7 +48,9 @@ import { DetailsComponent } from './components/details/details.component';
 		ContactComponent,
 		LoadingScreenComponent,
 		FooterComponent,
-  DetailsComponent,
+		DetailsComponent,
+		ServicesComponent,
+		HeaderComponent,
 	],
 	imports: [
 		BrowserModule,

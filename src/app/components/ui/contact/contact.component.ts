@@ -2,7 +2,7 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Ripple, Input, initTE, Validation, Alert } from 'tw-elements';
 import emailjs from '@emailjs/browser';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { routerTransition } from '../../router.animations';
+import { routerTransition } from '../../../router.animations';
 
 @Component({
 	selector: 'app-contact',
