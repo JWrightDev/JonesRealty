@@ -22,7 +22,7 @@ export const PROPERTYLIST: Property[] = [
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/Lofts-living-room-2.JPG?updatedAt=1698853745729',
 		],
 		listingLink:
-			'https://www.realtor.ca/real-estate/26115295/247-brock-street-unit-204-amherstburg',
+			'https://www.realtor.ca/real-estate/26664922/247-brock-street-unit-103-amherstburg',
 		isLeased: false,
 	},
 	{
