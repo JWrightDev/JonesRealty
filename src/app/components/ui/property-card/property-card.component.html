@@ -19,7 +19,11 @@
 		<p class="mb-3 font-normal text-white">{{propertyItem.description}}</p>
 	</div>
 	<div class="text-center mt-auto p-2 relative bottom-0">
-		<a  [routerLink]="['/details/', propertyItem.id]" *ngIf="!propertyItem.isLeased"
+		<a  [routerLink]="['/details/', propertyItem.id]" *ngIf="!propertyItem.isLeased && !propertyItem.address.includes('Lofts')"
+			class="cursor-pointer inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-black bg-opacity-50 rounded-lg focus:outline-none hover:bg-neutral-800 hover:text-neutral-400 focus:bg-neutral-800 active:bg-neutral-800 focus:text-neutral-400 active:text-neutral-400">
+			View Details
+		</a>
+		<a  [routerLink]="['/lofts']" *ngIf="!propertyItem.isLeased && propertyItem.address.includes('Lofts')"
 			class="cursor-pointer inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-black bg-opacity-50 rounded-lg focus:outline-none hover:bg-neutral-800 hover:text-neutral-400 focus:bg-neutral-800 active:bg-neutral-800 focus:text-neutral-400 active:text-neutral-400">
 			View Details
 		</a>

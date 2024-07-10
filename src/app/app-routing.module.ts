@@ -7,10 +7,13 @@ import { MediaComponent } from './components/Pages/media/media.component';
 import { CompanyComponent } from './components/Pages/company/company.component';
 import { NotFoundComponent } from './components/ui/not-found/not-found.component';
 import { DetailsComponent } from './components/Pages/details/details.component';
+import { LoftsComponent } from './components/Pages/lofts/lofts.component';
+import { OpenHousesComponent } from './components/Pages/open-houses/open-houses.component';
+import { JycComponent } from './components/Pages/jyc/jyc.component';
 
 const routes: Routes = [
 	{
-		path: '',
+		path: 'jr/home',
 		component: HomeComponent,
 		title: 'Jones Realty Inc. - Home',
 		data: {
@@ -18,7 +21,23 @@ const routes: Routes = [
 		},
 	},
 	{
-		path: 'properties',
+		path: 'jr',
+		redirectTo: 'jr/home',
+		pathMatch: 'full',
+		data: {
+			animation: 'home',
+		},
+	},
+	{
+		path: '',
+		redirectTo: 'jr/home',
+		pathMatch: 'full',
+		data: {
+			animation: 'home',
+		},
+	},
+	{
+		path: 'jr/properties',
 		component: PropertiesComponent,
 		title: 'Jones Realty Inc. - Properties',
 		data: {
@@ -26,7 +45,7 @@ const routes: Routes = [
 		},
 	},
 	{
-		path: 'projects',
+		path: 'jr/projects',
 		component: ProjectsComponent,
 		title: 'Jones Realty Inc. - Projects',
 		data: {
@@ -34,7 +53,7 @@ const routes: Routes = [
 		},
 	},
 	{
-		path: 'media',
+		path: 'jr/media',
 		component: MediaComponent,
 		title: 'Jones Realty Inc. - Media',
 		data: {
@@ -42,7 +61,7 @@ const routes: Routes = [
 		},
 	},
 	{
-		path: 'company',
+		path: 'jr/company',
 		component: CompanyComponent,
 		title: 'Jones Realty Inc. - Company / Contact',
 		data: {
@@ -50,11 +69,35 @@ const routes: Routes = [
 		},
 	},
 	{
-		path: 'details/:id',
+		path: 'jr/details/:id',
 		component: DetailsComponent,
 		title: 'Jones Realty Inc. - Details',
 		data: {
 			animation: 'details',
+		},
+	},
+	{
+		path: 'jr/lofts',
+		component: LoftsComponent,
+		title: 'Jones Realty Inc. - Lofts',
+		data: {
+			animation: 'lofts',
+		},
+	},
+	{
+		path: 'jr/open-houses',
+		component: OpenHousesComponent,
+		title: 'Jones Realty Inc. - Open Houses',
+		data: {
+			animation: 'open-houses',
+		},
+	},
+	{
+		path: 'jyc',
+		component: JycComponent,
+		title: 'Amherstburg & River Canard Yacht Club - Info',
+		data: {
+			animation: 'jyc',
 		},
 	},
 	{

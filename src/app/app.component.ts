@@ -9,6 +9,7 @@ import {
 	NavigationCancel,
 	NavigationError,
 	ChildrenOutletContexts,
+	ActivatedRoute,
 } from '@angular/router';
 import { loadingTransition, routerTransition } from './router.animations';
 
@@ -20,10 +21,17 @@ import { loadingTransition, routerTransition } from './router.animations';
 })
 export class AppComponent implements OnInit, AfterViewInit {
 	loading: boolean = true;
+	options: IsActiveMatchOptions = {
+		paths: 'subset',
+		fragment: 'ignored',
+		queryParams: 'ignored',
+		matrixParams: 'ignored',
+	};
 
 	constructor(
 		private router: Router,
 		private contexts: ChildrenOutletContexts,
+		private route: ActivatedRoute,
 	) {}
 
 	ngOnInit() {
@@ -31,6 +39,22 @@ export class AppComponent implements OnInit, AfterViewInit {
 		// setTimeout(() =>{
 		//   this.loading = !this.loading;
 		// }, 1500);
+		this.router.events.subscribe((event: RouterEvent) => {
+			if (event instanceof NavigationEnd) {
+				const currentRoute =
+					this.route.snapshot.firstChild?.routeConfig?.path;
+				switch (currentRoute) {
+					case 'jyc':
+						document.getElementById('body')?.classList.add('jyc');
+						break;
+					default:
+						document
+							.getElementById('body')
+							?.classList.remove('jyc');
+						break;
+				}
+			}
+		});
 	}
 
 	getState(outlet: any) {
@@ -179,4 +203,11 @@ export class AppComponent implements OnInit, AfterViewInit {
 			},
 		});
 	}
+}
+
+export declare interface IsActiveMatchOptions {
+	fragment: 'exact' | 'ignored';
+	matrixParams: 'exact' | 'subset' | 'ignored';
+	paths: 'exact' | 'subset';
+	queryParams: 'exact' | 'subset' | 'ignored';
 }

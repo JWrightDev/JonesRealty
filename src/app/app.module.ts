@@ -30,6 +30,10 @@ import { FooterComponent } from './components/ui/footer/footer.component';
 import { DetailsComponent } from './components/Pages/details/details.component';
 import { ServicesComponent } from './components/ui/services/services.component';
 import { HeaderComponent } from './components/ui/header/header.component';
+import { LoftsComponent } from './components/Pages/lofts/lofts.component';
+import { ListingCardComponent } from './components/ui/listing-card/listing-card.component';
+import { OpenHousesComponent } from './components/Pages/open-houses/open-houses.component';
+import { JycComponent } from './components/Pages/jyc/jyc.component';
 
 @NgModule({
 	declarations: [
@@ -51,6 +55,10 @@ import { HeaderComponent } from './components/ui/header/header.component';
 		DetailsComponent,
 		ServicesComponent,
 		HeaderComponent,
+  LoftsComponent,
+  ListingCardComponent,
+  OpenHousesComponent,
+  JycComponent,
 	],
 	imports: [
 		BrowserModule,

@@ -3,6 +3,40 @@
     <div class="divider-bottom">
         <!--Banner-->
         <section class="flex bg-[#1e1e1e] justify-end">
+			<ul
+				class="mr-auto flex list-none flex-col flex-wrap ps-0 md:flex-row ml-4 font-bold"
+				role="tablist"
+				data-twe-nav-ref>
+				<li role="presentation">
+					<a
+						routerLink="/jr"
+						class="my-2 block rounded bg-neutral-900 px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 md:me-4"
+						id="pills-home-tab0"
+						data-twe-toggle="pill"
+						data-twe-target="#jones-realty"
+						data-twe-nav-active
+						role="tab"
+						aria-controls="jones-realty"
+						ariaCurrentWhenActive="page"
+						routerLinkActive="!bg-primary-300 text-primary-700"
+						[routerLinkActiveOptions]="{fragment: 'ignored', matrixParams: 'ignored', paths: 'subset', queryParams: 'ignored'}"
+					>Jones Realty</a>
+				</li>
+				<li role="presentation">
+					<a
+						routerLink="/jyc/"
+						class="my-2 block rounded bg-neutral-900 px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 md:me-4"
+						id="pills-profile-tab0"
+						data-twe-toggle="pill"
+						data-twe-target="#jyc"
+						role="tab"
+						aria-controls="jyc"
+						aria-selected="false"
+						routerLinkActive="!bg-blue-300 text-blue-700"
+						[routerLinkActiveOptions]="{exact: true}"
+					>Amherstburg & River Canard Yacht Club</a>
+				</li>
+			</ul>
            <div class="flex flex-row items-center p-1">
                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 24 24" stroke-width="2" stroke="white"
