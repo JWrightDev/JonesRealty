@@ -4,10 +4,7 @@ import * as CookieConsent from 'vanilla-cookieconsent';
 import {
 	Router,
 	Event as RouterEvent,
-	NavigationStart,
 	NavigationEnd,
-	NavigationCancel,
-	NavigationError,
 	ChildrenOutletContexts,
 	ActivatedRoute,
 } from '@angular/router';
@@ -27,6 +24,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 		queryParams: 'ignored',
 		matrixParams: 'ignored',
 	};
+	currentRoute: any = '';
 
 	constructor(
 		private router: Router,
@@ -41,9 +39,9 @@ export class AppComponent implements OnInit, AfterViewInit {
 		// }, 1500);
 		this.router.events.subscribe((event: RouterEvent) => {
 			if (event instanceof NavigationEnd) {
-				const currentRoute =
+				this.currentRoute =
 					this.route.snapshot.firstChild?.routeConfig?.path;
-				switch (currentRoute) {
+				switch (this.currentRoute) {
 					case 'jyc':
 						document.getElementById('body')?.classList.add('jyc');
 						break;

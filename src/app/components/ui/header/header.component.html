@@ -1,10 +1,10 @@
-<nav class="bg-black border-gray-200 dark:bg-gray-900">
+<nav [ngClass]="currentRoute === 'jyc' ? 'bg-blue-100' : 'bg-black border-gray-200 dark:bg-gray-900'">
 	<div class="max-w-screen-xl grid lg:grid-cols-3 grid-cols-2 items-center mx-auto p-4">
 		<a [routerLink]="['jr/home']" class="flex lg:items-center nav-item"
 		   aria-label="Jones Realty Logo"
 		   appMobileCollapse id="mobileLogo">
-			<img src="https://ik.imagekit.io/uqghswpnt/Jones%20Realty/JonesRealtyLogo.png"
-				 class="md:h-24 mr-3 h-14" alt="Jones Realty Logo"/>
+			<img [src]="currentRoute === 'jyc' ? 'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/ayc.png?updatedAt=1720643872289' : 'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/JonesRealtyLogo.png'"
+				  [ngClass]="currentRoute === 'jyc' ? 'md:h-24 h-14 object-cover' : 'md:h-24 mr-3 h-14'" [alt]="currentRoute === 'jyc' ? 'Amherstburg Yacht Club logo' : 'Jones Realty Inc. logo'"/>
 		</a>
 		<button type="button"
 				class="inline-flex items-center p-2 ml-auto text-sm lg:hidden"
@@ -24,7 +24,7 @@
 					  clip-rule="evenodd"></path>
 			</svg>
 		</button>
-		<ul class="lg:flex flex-col lg:flex-row w-full box-border hidden lg:w-auto bg-black col-span-2"
+		<ul *ngIf="currentRoute !== 'jyc'" class="lg:flex flex-col lg:flex-row w-full box-border hidden lg:w-auto bg-black col-span-2"
 			id="menu">
 			<li class=" mx-1 lg:w-full  text-center bg-black hover:bg-gradient-to-r focus:bg-gradient-to-r from-secondary to-primary ease-in-out p-0.5 hover:animate-gradient-x focus:animate-gradient-x">
 				<a [routerLink]="['jr/properties']"

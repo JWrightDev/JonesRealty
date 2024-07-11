@@ -37,7 +37,7 @@
 					>Amherstburg & River Canard Yacht Club</a>
 				</li>
 			</ul>
-           <div class="flex flex-row items-center p-1">
+           <div class="flex flex-row items-center p-1" *ngIf="currentRoute !== 'jyc'">
                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 24 24" stroke-width="2" stroke="white"
                     class="md:w-[1.3rem] md:h-[1.3rem] w-[1.8rem] h-[1.8rem]">
@@ -60,7 +60,7 @@
                 </svg>
 
                 <a class="ml-[0.25rem] text-white text-[1rem] hover:text-primary focus:text-primary mobile-text"
-                   href="tel:5197362969">519-736-2969</a>
+                   href="{{currentRoute === 'jyc' ? 'tel:5199192646' : 'tel:5197362969'}}">{{currentRoute === 'jyc' ? '519-919-2646' : '519-736-2969'}}</a>
             </div>
         </section>
 

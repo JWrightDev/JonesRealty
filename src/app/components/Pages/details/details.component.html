@@ -3,6 +3,14 @@
 	<hr
 		class="my-1 mb-2 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-primary to-transparent opacity-25 dark:opacity-100 md:col-span-2" />
 
+	<div *ngIf="property.videoLinks && property.id == 1" class=" embed-responsive embed-responsive-16by9 relative w-10/12 mx-auto overflow-hidden" style="padding-top: 56.25%">
+		<iframe class="embed-responsive-item absolute bottom-0 left-0 right-0 top-0 h-full w-full" src="https://www.youtube.com/embed/BcXiZzaZCG4?si=KwACtuo5I32aI4tO"
+				title="YouTube video player"
+				allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+		</iframe>
+	</div>
+
 	<img *ngIf="!property.thumbnails" class="mx-auto" src="{{property.thumbnailLink}}" alt="{{property.altText}}">
 
 	<section *ngIf="property.thumbnails" class="mt-0">

@@ -9,4 +9,5 @@ export interface Property {
 	thumbnails?: string[];
 	listingLink?: string;
 	isLeased?: boolean;
+	videoLinks?: string[];
 }

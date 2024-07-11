@@ -3,6 +3,7 @@ import { Property } from '../../../helperFiles/Property';
 import { InfoService } from '../../../services/info.service';
 import { ActivatedRoute } from '@angular/router';
 import { initTE, Sticky } from 'tw-elements';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
 	selector: 'app-details',
@@ -16,6 +17,7 @@ export class DetailsComponent implements OnInit {
 	constructor(
 		private infoService: InfoService,
 		private route: ActivatedRoute,
+		public sanitizer: DomSanitizer,
 	) {
 		this.property = {
 			id: 0,
@@ -26,6 +28,7 @@ export class DetailsComponent implements OnInit {
 			altText: '',
 			thumbnails: [],
 			listingLink: '',
+			videoLinks: [],
 		};
 		this.id = 0;
 	}
