@@ -1,11 +1,11 @@
 <!--Footer-->
-<div class="footer flex flex-col divider-top bg-black mt-auto">
+<div [ngClass]="currentRoute === 'jyc' ? 'footer flex flex-col divider-top bg-blue-100 mt-auto text-blue-700' : 'footer flex flex-col divider-top bg-black mt-auto'">
   <div class="flex flex-col md:flex-row p-5">
     <section
       class="text-center flex items-center justify-center mx-auto lg:text-3xl text-xl">
       Please feel free to <br/>get in touch with us
     </section>
-    <section class="mx-auto justify-center items-center flex my-5">
+    <section *ngIf="currentRoute !== 'jyc'" class="mx-auto justify-center items-center flex my-5">
       <ul class="flex flex-col">
         <li class="p-2"><a [routerLink]="['properties']"
                            class="hover:text-primary text-primary lg:text-white">Properties</a>
@@ -25,19 +25,55 @@
         </li>
       </ul>
     </section>
+	<section *ngIf="currentRoute !== 'jyc'" class="mx-auto justify-center items-center my-5">
+		<div class="ml-6 grow w-full">
+			<table class="w-full">
+				<tbody>
+				<tr>
+					<td class="text-neutral-200">Monday</td>
+					<td class="lg:text-center text-neutral-400">7:00am - 4:00pm</td>
+				</tr>
+				<tr>
+					<td class="text-neutral-200">Tuesday</td>
+					<td class="lg:text-center text-neutral-400">7:00am - 4:00pm</td>
+				</tr>
+				<tr>
+					<td class="text-neutral-200">Wednesday</td>
+					<td class="lg:text-center text-neutral-400">7:00am - 4:00pm</td>
+				</tr>
+				<tr>
+					<td class="text-neutral-200">Thursday</td>
+					<td class="lg:text-center text-neutral-400">7:00am - 4:00pm</td>
+				</tr>
+				<tr>
+					<td class="text-neutral-200">Friday</td>
+					<td class="lg:text-center text-neutral-400">7:00am - 4:00pm</td>
+				</tr>
+				<tr>
+					<td class="text-neutral-200">Saturday</td>
+					<td class="lg:text-center text-neutral-400">Closed</td>
+				</tr>
+				<tr>
+					<td class="text-neutral-200">Sunday</td>
+					<td class="lg:text-center text-neutral-400">Closed</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
     <section class="mx-auto flex justify-center flex-col">
       <div class="flex lg:flex-row p-1">
         <envelope-outline-icon class="m-1 mt-0"
-                               color="#FFFF40"></envelope-outline-icon>
+                               [color]="currentRoute === 'jyc' ? 'rgb(29 78 216)' : '#FFFF40'"></envelope-outline-icon>
         <div>
           <p>How can we Help?</p>
-          <a href="mailto:mackie.jones@jones-realty.ca"
-             class="hover:text-primary focus:text-primary underline">mackie.jones@jones-realty.ca</a>
+          <a href="{{currentRoute === 'jyc' ? 'mailto:info@amherstburgyachtclub.ca' : 'mailto:mackie.jones@jones-realty.ca'}}"
+             class="hover:text-primary focus:text-primary underline">{{currentRoute === 'jyc' ? 'info@amherstburgyachtclub.ca' : 'mackie.jones@jones-realty.ca'}}</a>
         </div>
       </div>
-      <div class="flex flex-row p-1">
+      <div class="flex flex-row p-1" *ngIf="currentRoute !== 'jyc'">
         <map-pin-outline-icon class="m-1 mt-0"
-                              color="#FFFF40"></map-pin-outline-icon>
+							  [color]="currentRoute === 'jyc' ? 'rgb(29 78 216)' : '#FFFF40'"></map-pin-outline-icon>
         <div>
           <p>Our Location</p>
           <a class="hover:text-primary focus:text-primary underline"
@@ -48,11 +84,11 @@
       </div>
       <div class="flex flex-row p-1">
         <phone-outline-icon class="m-1 mt-0"
-                            color="#FFFF40"></phone-outline-icon>
+							[color]="currentRoute === 'jyc' ? 'rgb(29 78 216)' : '#FFFF40'"></phone-outline-icon>
         <div>
           <p>Give Us a Call</p>
-          <a href="tel:5197362969"
-             class="hover:text-primary focus:text-primary underline">519-736-2969</a>
+          <a href="{{currentRoute === 'jyc' ? 'tel:5199192646' : 'tel:5197362969'}}"
+             class="hover:text-primary focus:text-primary underline">{{currentRoute === 'jyc' ? '519-919-2646' :'519-736-2969'}}</a>
         </div>
       </div>
     </section>
@@ -60,9 +96,9 @@
   <div class="grid lg:grid-cols-3 divider-top items-center text-center p-2">
     <section
       class="flex flex-row items-center my-3 justify-center lg:justify-start">
-      <img src="https://ik.imagekit.io/uqghswpnt/Jones%20Realty/JonesRealtyLogo.png" alt="Jones Realty Logo"
+      <img [src]="currentRoute === 'jyc' ? 'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/ayc.png?updatedAt=1720643872289' : 'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/JonesRealtyLogo.png'" [alt]="currentRoute === 'jyc' ? 'Amherstburg Yacht Club logo' : 'Jones Realty Inc. logo'"
            class="md:w-[25%] w-[50%]">
-      Jones Realty Inc.
+		{{ currentRoute === 'jyc' ? '' : 'Jones Realty Inc.'}}
     </section>
     <section class="">
       &copy; 2024 Jones Realty Inc. - All Rights Reserved
@@ -75,6 +111,7 @@
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="lg:h-4 lg:w-4 h-8 w-8"
+			[ngClass]="currentRoute === 'jyc' ? 'fill-blue-600' : 'fill-white'"
             fill="white"
             viewBox="0 0 24 24">
             <path

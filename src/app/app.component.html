@@ -3,7 +3,41 @@
     <div class="divider-bottom">
         <!--Banner-->
         <section class="flex bg-[#1e1e1e] justify-end">
-           <div class="flex flex-row items-center p-1">
+			<ul
+				class="mr-auto flex list-none flex-col flex-wrap ps-0 md:flex-row ml-4 font-bold"
+				role="tablist"
+				data-twe-nav-ref>
+				<li role="presentation">
+					<a
+						routerLink="/jr"
+						class="my-2 block rounded bg-neutral-900 px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 md:me-4"
+						id="pills-home-tab0"
+						data-twe-toggle="pill"
+						data-twe-target="#jones-realty"
+						data-twe-nav-active
+						role="tab"
+						aria-controls="jones-realty"
+						ariaCurrentWhenActive="page"
+						routerLinkActive="!bg-primary-300 text-primary-700"
+						[routerLinkActiveOptions]="{fragment: 'ignored', matrixParams: 'ignored', paths: 'subset', queryParams: 'ignored'}"
+					>Jones Realty</a>
+				</li>
+				<li role="presentation">
+					<a
+						routerLink="/jyc/"
+						class="my-2 block rounded bg-neutral-900 px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 md:me-4"
+						id="pills-profile-tab0"
+						data-twe-toggle="pill"
+						data-twe-target="#jyc"
+						role="tab"
+						aria-controls="jyc"
+						aria-selected="false"
+						routerLinkActive="!bg-blue-300 text-blue-700"
+						[routerLinkActiveOptions]="{exact: true}"
+					>Amherstburg & River Canard Yacht Club</a>
+				</li>
+			</ul>
+           <div class="flex flex-row items-center p-1" *ngIf="currentRoute !== 'jyc'">
                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 24 24" stroke-width="2" stroke="white"
                     class="md:w-[1.3rem] md:h-[1.3rem] w-[1.8rem] h-[1.8rem]">
@@ -26,7 +60,7 @@
                 </svg>
 
                 <a class="ml-[0.25rem] text-white text-[1rem] hover:text-primary focus:text-primary mobile-text"
-                   href="tel:5197362969">519-736-2969</a>
+                   href="{{currentRoute === 'jyc' ? 'tel:5199192646' : 'tel:5197362969'}}">{{currentRoute === 'jyc' ? '519-919-2646' : '519-736-2969'}}</a>
             </div>
         </section>
 

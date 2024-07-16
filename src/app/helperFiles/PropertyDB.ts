@@ -46,6 +46,9 @@ export const PROPERTYLIST: Property[] = [
 		listingLink:
 			'https://www.remax.ca/on/amherstburg-real-estate/207-brock-unit-207-wp_idm73000004-26430613-lst',
 		isLeased: false,
+		videoLinks: [
+			'<iframe width="560" height="315" src="https://www.youtube.com/embed/BcXiZzaZCG4?si=KwACtuo5I32aI4tO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+		],
 	},
 	{
 		id: 2,
@@ -90,9 +93,9 @@ export const PROPERTYLIST: Property[] = [
 		address: 'River Canard Yacht Club. Amherstburg, ON.',
 		description:
 			'Boat wells available for rent. Daily and seasonal launch passes available.',
-		contactLink: 'https://www.facebook.com/amherstburgyachtclub',
+		contactLink: '/#/jyc',
 		thumbnailLink:
-			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/rcyc.jpg',
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/_MG_7780-1.jpg?updatedAt=1721158391346',
 		altText: 'a view of a boat dock from across the street. ',
 		isLeased: false,
 	},

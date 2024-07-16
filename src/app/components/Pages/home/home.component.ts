@@ -18,18 +18,10 @@ export class HomeComponent implements OnInit {
 		this.featuredList = [];
 	}
 
-	preventReload(e: { preventDefault: () => void }): void {
-		e.preventDefault();
-	}
-
 	ngOnInit() {
 		initTE({ Carousel, Modal, Ripple, Alert });
 		this.infoService
 			.getFeaturedObs()
 			.subscribe((featuredArray) => (this.featuredList = featuredArray));
-	}
-
-	openWindow(url: string) {
-		window.open(url, '_blank');
 	}
 }

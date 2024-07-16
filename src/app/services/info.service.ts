@@ -6,6 +6,8 @@ import { Project } from '../helperFiles/Project';
 import { PROJECTLIST } from '../helperFiles/ProjectDb';
 import { Featured } from '../helperFiles/Featured';
 import { FEATUREDLIST } from '../helperFiles/FeaturedDb';
+import { LOFTLIST } from '../helperFiles/LoftDb';
+import { Loft } from '../helperFiles/Loft';
 
 @Injectable({
 	providedIn: 'root',
@@ -27,5 +29,9 @@ export class InfoService {
 
 	getProperty(id: number): Observable<Property | undefined> {
 		return of(PROPERTYLIST.at(id));
+	}
+
+	getLoftsObs(): Observable<Loft[]> {
+		return of(LOFTLIST);
 	}
 }
