@@ -93,9 +93,9 @@ export const PROPERTYLIST: Property[] = [
 		address: 'River Canard Yacht Club. Amherstburg, ON.',
 		description:
 			'Boat wells available for rent. Daily and seasonal launch passes available.',
-		contactLink: 'https://www.facebook.com/amherstburgyachtclub',
+		contactLink: '/#/jyc',
 		thumbnailLink:
-			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/rcyc.jpg',
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/_MG_7780-1.jpg?updatedAt=1721158391346',
 		altText: 'a view of a boat dock from across the street. ',
 		isLeased: false,
 	},
