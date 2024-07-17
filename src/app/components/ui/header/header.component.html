@@ -6,7 +6,7 @@
 			<img [src]="currentRoute === 'jyc' ? 'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/ayc.png?updatedAt=1720643872289' : 'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/JonesRealtyLogo.png'"
 				  [ngClass]="currentRoute === 'jyc' ? 'md:h-24 h-14 object-cover' : 'md:h-24 mr-3 h-14'" [alt]="currentRoute === 'jyc' ? 'Amherstburg Yacht Club logo' : 'Jones Realty Inc. logo'"/>
 		</a>
-		<button type="button"
+		<button *ngIf="currentRoute !== 'jyc'"  type="button"
 				class="inline-flex items-center p-2 ml-auto text-sm lg:hidden"
 				id="menu-toggle"
 				data-te-collapse-init
