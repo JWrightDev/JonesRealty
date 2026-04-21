@@ -34,6 +34,7 @@ import { LoftsComponent } from './components/Pages/lofts/lofts.component';
 import { ListingCardComponent } from './components/ui/listing-card/listing-card.component';
 import { OpenHousesComponent } from './components/Pages/open-houses/open-houses.component';
 import { JycComponent } from './components/Pages/jyc/jyc.component';
+import { StjohnsComponent } from './components/Pages/stjohns/stjohns.component';
 
 @NgModule({
 	declarations: [
@@ -59,6 +60,7 @@ import { JycComponent } from './components/Pages/jyc/jyc.component';
   ListingCardComponent,
   OpenHousesComponent,
   JycComponent,
+  StjohnsComponent,
 	],
 	imports: [
 		BrowserModule,

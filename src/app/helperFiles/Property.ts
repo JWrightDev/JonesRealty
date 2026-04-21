@@ -10,4 +10,5 @@ export interface Property {
 	listingLink?: string;
 	isLeased?: boolean;
 	videoLinks?: string[];
+	isForSale?: boolean;
 }
