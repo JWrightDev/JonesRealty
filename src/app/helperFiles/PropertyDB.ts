@@ -61,7 +61,7 @@ export const PROPERTYLIST: Property[] = [
 		thumbnailLink:
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/365Sandwich.png?tr=w-600',
 		altText: 'an empty parking lot in front of a building. ',
-		isLeased: false,
+		isLeased: true,
 		isForSale: false,
 	},
 	{
@@ -107,13 +107,13 @@ export const PROPERTYLIST: Property[] = [
 	},
 	{
 		id: 6,
-		address: 'Garage Gym. Amherstburg, ON.',
+		address: '227 Sandwich Street South. Amherstburg, ON.',
 		description: 'Space available for lease.',
 		contactLink: '',
 		thumbnailLink:
-			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/garagegym.JPG?updatedAt=1706385791175',
-		altText: 'Street view of garage gym',
-		isLeased: true,
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/JonesRealtyLogo.png',
+		altText: 'Jones Realty Logo',
+		isLeased: false,
 		isForSale: false,
 	},
 ];

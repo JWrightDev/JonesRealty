@@ -5,4 +5,5 @@ export interface Loft {
 	thumbnailLink?: string;
 	altText?: string;
 	isLeased: boolean;
+	isSold?: boolean;
 }

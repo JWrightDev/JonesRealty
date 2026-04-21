@@ -5,4 +5,5 @@ export interface Apartment{
 	thumbnailLink?: string;
 	altText?: string;
 	isLeased: boolean;
+	isSold?: boolean;
 }

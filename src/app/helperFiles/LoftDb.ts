@@ -99,7 +99,8 @@ export const LOFTLIST: Loft[] = [
 		thumbnailLink:
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/Loft-Front-View.JPG?updatedAt=1698853811559&tr=w-600',
 		altText: '',
-		isLeased: true,
+		isLeased: false,
+		isSold: true
 	},
 	{
 		id: 13,
