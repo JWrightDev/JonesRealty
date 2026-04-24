@@ -8,6 +8,8 @@ import { Featured } from '../helperFiles/Featured';
 import { FEATUREDLIST } from '../helperFiles/FeaturedDb';
 import { LOFTLIST } from '../helperFiles/LoftDb';
 import { Loft } from '../helperFiles/Loft';
+import {Apartment} from "../helperFiles/Apartment";
+import {APARTMENTLIST} from "../helperFiles/ApartmentDB";
 
 @Injectable({
 	providedIn: 'root',
@@ -33,5 +35,9 @@ export class InfoService {
 
 	getLoftsObs(): Observable<Loft[]> {
 		return of(LOFTLIST);
+	}
+
+	getApartmentsObs(): Observable<Apartment[]> {
+		return of(APARTMENTLIST);
 	}
 }

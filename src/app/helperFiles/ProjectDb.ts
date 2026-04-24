@@ -29,7 +29,7 @@ export const PROJECTLIST: Project[] = [
 		thumbnailLink:
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/JonesRealtyLogo.png',
 		projectContactLink:
-			'https://www.realtor.ca/real-estate/26230724/231-sandwich-street-south-amherstburg',
+			'',
 		isNew: true,
 	},
 ];

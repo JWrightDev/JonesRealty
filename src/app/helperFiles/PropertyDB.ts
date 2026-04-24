@@ -24,12 +24,13 @@ export const PROPERTYLIST: Property[] = [
 		listingLink:
 			'https://www.realtor.ca/real-estate/26664922/247-brock-street-unit-103-amherstburg',
 		isLeased: false,
+		isForSale: false,
 	},
 	{
 		id: 1,
 		address: "St. John's Apartments, Amherstburg, ON.",
 		description: 'Apartments Available Now!',
-		contactLink: 'https://www.facebook.com/profile.php?id=61551698053689',
+		contactLink: '/jr/apartments',
 		thumbnailLink:
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/Building-Render.jpg?tr=w-600',
 		altText: 'a render of the apartment building',
@@ -49,6 +50,7 @@ export const PROPERTYLIST: Property[] = [
 		videoLinks: [
 			'<iframe width="560" height="315" src="https://www.youtube.com/embed/BcXiZzaZCG4?si=KwACtuo5I32aI4tO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
 		],
+		isForSale: false,
 	},
 	{
 		id: 2,
@@ -59,7 +61,8 @@ export const PROPERTYLIST: Property[] = [
 		thumbnailLink:
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/365Sandwich.png?tr=w-600',
 		altText: 'an empty parking lot in front of a building. ',
-		isLeased: false,
+		isLeased: true,
+		isForSale: false,
 	},
 	{
 		id: 3,
@@ -70,6 +73,7 @@ export const PROPERTYLIST: Property[] = [
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/weston.png?tr=w-600',
 		altText: 'a parking lot with several cars parked in it. ',
 		isLeased: true,
+		isForSale: false,
 	},
 	{
 		id: 4,
@@ -87,6 +91,7 @@ export const PROPERTYLIST: Property[] = [
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/docks-4.jpg?updatedAt=1698853741651',
 		],
 		isLeased: false,
+		isForSale: false,
 	},
 	{
 		id: 5,
@@ -98,15 +103,17 @@ export const PROPERTYLIST: Property[] = [
 			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/_MG_7780-1.jpg?updatedAt=1721158391346',
 		altText: 'a view of a boat dock from across the street. ',
 		isLeased: false,
+		isForSale: false,
 	},
 	{
 		id: 6,
-		address: 'Garage Gym. Amherstburg, ON.',
+		address: '227 Sandwich Street South. Amherstburg, ON.',
 		description: 'Space available for lease.',
 		contactLink: '',
 		thumbnailLink:
-			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/garagegym.JPG?updatedAt=1706385791175',
-		altText: 'Street view of garage gym',
-		isLeased: true,
+			'https://ik.imagekit.io/uqghswpnt/Jones%20Realty/JonesRealtyLogo.png',
+		altText: 'Jones Realty Logo',
+		isLeased: false,
+		isForSale: false,
 	},
 ];

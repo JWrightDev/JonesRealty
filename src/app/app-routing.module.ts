@@ -10,6 +10,7 @@ import { DetailsComponent } from './components/Pages/details/details.component';
 import { LoftsComponent } from './components/Pages/lofts/lofts.component';
 import { OpenHousesComponent } from './components/Pages/open-houses/open-houses.component';
 import { JycComponent } from './components/Pages/jyc/jyc.component';
+import { StjohnsComponent } from "./components/Pages/stjohns/stjohns.component";
 
 const routes: Routes = [
 	{
@@ -82,6 +83,14 @@ const routes: Routes = [
 		title: 'Jones Realty Inc. - Lofts',
 		data: {
 			animation: 'lofts',
+		},
+	},
+	{
+		path: 'jr/apartments',
+		component: StjohnsComponent,
+		title: 'Jones Realty Inc. - Apartments',
+		data: {
+			animation: 'apartments',
 		},
 	},
 	{

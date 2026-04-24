@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Loft } from '../../../helperFiles/Loft';
+import {Apartment} from "../../../helperFiles/Apartment";
 
 @Component({
 	selector: 'app-listing-card',
@@ -7,10 +8,10 @@ import { Loft } from '../../../helperFiles/Loft';
 	styleUrls: ['./listing-card.component.scss'],
 })
 export class ListingCardComponent {
-	@Input() loftItem: Loft;
+	@Input() propertyItem: Loft | Apartment;
 
 	constructor() {
-		this.loftItem = {
+		this.propertyItem = {
 			id: 0,
 			title: '',
 			listingLink: '',

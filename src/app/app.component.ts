@@ -71,9 +71,9 @@ export class AppComponent implements OnInit, AfterViewInit {
 			// revision: 0,
 
 			cookie: {
-				//name: 'cc_cookie',
-				//domain: location.hostname,
-				//path: '/',
+				name: 'Jones-Realty',
+				domain: location.hostname,
+				path: '/',
 				// sameSite: "Lax",
 				expiresAfterDays: 30,
 			},

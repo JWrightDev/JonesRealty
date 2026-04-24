@@ -1,4 +1,4 @@
-export interface Loft {
+export interface Apartment{
 	id: number;
 	title: string;
 	listingLink: string;
